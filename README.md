@@ -1,5 +1,8 @@
 # Knowledge Assistant AI
 
+![App Screenshot](docs/kaai-screenshot.png)
+
+
 A complete AI project that covers **LangChain, RAG, AI Agents, MCP, and LLMOps**. RAG mode runs 100% locally for free using Ollama. Agent mode requires an Anthropic API key (paid, per use).
 
 ---
