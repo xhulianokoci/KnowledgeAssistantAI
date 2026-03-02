@@ -1,0 +1,53 @@
+LANGCHAIN AND RAG EXPLAINED
+
+What is LangChain?
+LangChain is a framework for building applications with Large Language Models (LLMs). It provides tools and abstractions to connect LLMs with external data, APIs, and logic. Think of it as the "glue" that connects AI models to the real world.
+
+Core LangChain Concepts:
+
+1. Chains
+A chain is a sequence of steps. Each step takes input, processes it, and passes output to the next step. The simplest chain is: prompt → LLM → response.
+
+2. Prompts and Prompt Templates
+A prompt template is a reusable template with variables. Example:
+"Answer this question about {topic}: {question}"
+You fill in the variables at runtime.
+
+3. Memory
+Memory lets the AI remember previous messages in a conversation. Without memory, each message is treated as a new conversation. With memory, the AI maintains context.
+
+4. Document Loaders
+These load data from different sources: PDFs, text files, websites, databases. After loading, documents are split into chunks.
+
+5. Vector Stores
+A vector store saves document embeddings (numeric representations) and allows fast similarity search.
+
+What is RAG (Retrieval-Augmented Generation)?
+RAG is a technique that improves LLM answers by retrieving relevant information first.
+
+The RAG Pipeline:
+Step 1 - INDEXING (done once):
+  a) Load documents
+  b) Split into chunks (e.g., 500 characters each)
+  c) Convert chunks to embeddings (numbers)
+  d) Store embeddings in a vector database
+
+Step 2 - RETRIEVAL (at query time):
+  a) User asks a question
+  b) Convert question to embedding
+  c) Find most similar chunks in vector store
+  d) Return top K chunks
+
+Step 3 - GENERATION:
+  a) Combine retrieved chunks + question into a prompt
+  b) Send to LLM
+  c) LLM generates answer based on retrieved context
+
+Why RAG?
+- LLMs have knowledge cutoffs and don't know your private data
+- RAG lets you chat with YOUR documents
+- More accurate and grounded answers
+- Reduces AI "hallucinations"
+
+What is ChromaDB?
+ChromaDB is an open-source vector database that runs locally. It stores and retrieves document embeddings. Perfect for RAG projects because it's simple and requires no cloud setup.

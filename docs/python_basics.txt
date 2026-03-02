@@ -1,0 +1,45 @@
+PYTHON PROGRAMMING FUNDAMENTALS
+
+What is Python?
+Python is a high-level, beginner-friendly programming language created by Guido van Rossum in 1991. It is known for its clean, readable syntax and versatility. Python is used in web development, data science, AI/ML, automation, and more.
+
+Basic Data Types:
+- int: Whole numbers (e.g., 42)
+- float: Decimal numbers (e.g., 3.14)
+- str: Text strings (e.g., "Hello World")
+- bool: True or False
+- list: Ordered collection (e.g., [1, 2, 3])
+- dict: Key-value pairs (e.g., {"name": "Alice", "age": 30})
+
+Control Flow:
+- if/elif/else: Make decisions
+- for loop: Repeat over a sequence
+- while loop: Repeat while a condition is true
+- functions: Reusable blocks of code using def keyword
+
+Common Python Libraries:
+- os: Interact with the operating system
+- json: Work with JSON data
+- requests: Make HTTP requests
+- pandas: Data analysis and manipulation
+- numpy: Numerical computing
+- matplotlib: Data visualization
+
+Virtual Environments:
+A virtual environment isolates project dependencies. Create with: python -m venv venv
+Activate on Mac/Linux: source venv/bin/activate
+Activate on Windows: venv\Scripts\activate
+Install packages: pip install package-name
+
+Package Management with pip:
+pip is Python's package installer.
+- pip install langchain: Install a package
+- pip freeze > requirements.txt: Save current packages
+- pip install -r requirements.txt: Install from file
+
+Python Best Practices:
+1. Use descriptive variable names
+2. Write comments to explain complex logic
+3. Keep functions small and focused
+4. Handle errors with try/except blocks
+5. Use virtual environments for every project
