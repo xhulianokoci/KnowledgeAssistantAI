@@ -39,14 +39,21 @@ ollama pull nomic-embed-text   # For creating embeddings (~270MB)
 # Navigate to this project folder
 cd knowledge-assistant
 
-# Create a virtual environment
-python -m venv venv
+# Create a virtual environment with Python 3.11
+# On Windows:
+py -3.11 -m venv venv
+
+# On Mac/Linux:
+python3.11 -m venv venv
 
 # Activate it
 # On Mac/Linux:
 source venv/bin/activate
 # On Windows:
 venv\Scripts\activate
+
+# Verify Python version
+python --version  # Should show Python 3.11.x
 
 # Install dependencies
 pip install -r requirements.txt
